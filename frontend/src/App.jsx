@@ -30,7 +30,7 @@ const App = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/predict", {
+      const res = await fetch("https://insurance-price-predict-backend.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
