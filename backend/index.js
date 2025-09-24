@@ -5,7 +5,11 @@ const { trainInsuranceModelSync, predictInsurance } = require("./insurance");
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://insurance-price-predict-frontend.onrender.com",
+  })
+);
 app.use(express.json());
 
 // Train the model once at server start
